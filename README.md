@@ -1,1 +1,1 @@
-## CNN Variational Autoencoder in PyTorch
+## A CNN Variational Autoencoder in PyTorch
