@@ -2,3 +2,7 @@
 __pycache__/
 
 data/
+
+rollouts/
+
+*.zip
