@@ -2,7 +2,7 @@
 # @Author: Shubham Chandel
 # @Date:   2018-04-21 18:55:18
 # @Last Modified by:   Shubham Chandel
-# @Last Modified time: 2018-04-22 02:37:31
+# @Last Modified time: 2018-04-22 03:02:35
 
 from car_racing import CarRacing
 
@@ -17,7 +17,7 @@ steps = 150
 
 def get_action():
 	# return choice([[1, 0, 0], [-1, 0, 0], [0, 1, 0]])
-	# return [2*random()-1.1, random(), 0]
+	# return [2*random()-1.05, 1, 0]
 	action = env.action_space.sample()
 	action[0] -= 0.05
 	action[1] = 1
@@ -34,7 +34,8 @@ for eps in range(episodes):
 		# env.render()
 		r += reward
 		if t%5 == 0:
-			scipy.misc.imsave(f'rollouts/CarRacing/car_{eps}_{t}.jpg', obs)
+			i = ('000' + str(t//5))[-3:]
+			scipy.misc.imsave(f'rollouts/CarRacing/car_{eps}_{i}.jpg', obs)
 	print("Episode [{}/{}]: CummReward {:.2f}".format(eps+1, episodes, r))
 
 
