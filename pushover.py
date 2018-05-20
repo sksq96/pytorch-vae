@@ -7,8 +7,8 @@
 import requests
 
 data = {
-	'token': "artxodbwz2k79sfb3sntjpdtti68kk",
-	'user': "ub4rxexotoggvi1xrkcpv4dmu3f2xx",
+	'token': "",
+	'user': "",
 }
 
 JUSTBECAUSE = "Just because I have to put something."
