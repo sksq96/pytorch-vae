@@ -63,3 +63,5 @@ class VAE(nn.Module):
         z, mu, logvar = self.bottleneck(h)
         z = self.fc3(z)
         return self.decoder(z), mu, logvar
+
+        
